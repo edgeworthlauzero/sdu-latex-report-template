@@ -1,0 +1,73 @@
+%% 宏包引用
+
+% 页边距设置
+% (防止覆盖)
+\usepackage{geometry}     % 设置页边距
+
+% 字体相关
+\usepackage{fontspec}     % 设置字体
+\usepackage[UTF8]{ctex}   % 提供中文支持
+
+% 数学相关
+\usepackage{amsfonts}     % 插入数学字体
+\usepackage{amsmath}      % 插入数学公式
+\usepackage{amssymb}      % 插入数学符号
+\usepackage{siunitx}      % 插入单位
+
+% 图形绘图相关
+\usepackage{graphicx}     % 插入图片
+\usepackage{tikz}         % 绘制图表
+\usepackage{booktabs}     % 生成表格
+\usepackage{caption}      % 设置标题
+\usepackage{subcaption}   % 插入子图表标题
+\usepackage{float}        % 设置图片位置
+
+% 文档结构相关
+\usepackage{abstract}     % 设置摘要
+\usepackage{authblk}      % 处理作者信息
+\usepackage{sectsty}      % 设置章节标题
+\usepackage{multicol}     % 提供多栏排版支持
+
+% 代码块相关
+\usepackage{minted}       % 插入代码
+\usepackage{xcolor}       % 设置自定义颜色
+
+% 链接引用相关
+\usepackage{hyperref}     % 插入超链接
+\usepackage{cleveref}     % 重定义引用
+\usepackage{cite}         % 管理参考文献引用
+
+
+
+% 页面样式设置
+\geometry{
+    left=3.00cm,
+    right=3.00cm,
+    top=2.50cm,
+    bottom=2.50cm
+}
+
+% 超链接设置
+\hypersetup{
+    hidelinks,
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=cyan,
+}
+
+% 代码高亮设置
+\setminted{
+    linenos,
+    breaklines,
+	frame=single,
+	tabsize=4,
+	encoding=utf8,
+}
+
+% 标题与引用前缀设置
+\renewcommand{\listingscaption}{代码}
+\crefname{listing}{代码}{代码}
+\crefname{figure}{图}{图}
+\crefname{table}{表}{表}
